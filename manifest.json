@@ -1,0 +1,27 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_title": "NEW ID"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.min.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "pt",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiZ2PXkEIE1u2xyltVcgnPLwpTnasMl9lffBJTQRhg7+j+bSuAnQgPPGqE3E1Yv74CZRN61YyUJnLcrk82pzp5idZeMe0088T6EJSSEjQff5tEpdgmyey42MgDE7NlyOD0ewWVdUQItzqti/hXanABHzqms2xXXrultaNR+mxQFsJabTF2WD9MDOmkDLrDbDuEZ1h81PN++98aZ6f+3VntEAZWVzCDJNeZh7xdxDPy7me9kPy0NKDzNZRufvTLRcLNcdm/vxOSXM6Q2iZ0nF3JXmMs3/B1ZVOm30KAt28ssMxadWFpv02gfhaVrTV4dHPlXGZTLIp2lESfuX8N+BwLwIDAQAB",
+   "manifest_version": 2,
+   "name": "MultiSession",
+   "permissions": [ "contextMenus", "cookies", "storage", "tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "webNavigation" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.6.963"
+}
